@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FileDrop } from "react-file-drop";
 import "./Upload.css";
 
 function Upload(props) {
@@ -9,6 +10,7 @@ function Upload(props) {
   });
 
   const onFileChange = (e) => {
+    console.log(e.target.files[0]);
     setSelectedFile(e.target.files[0]);
     setFile({
       src: URL.createObjectURL(e.target.files[0]),
@@ -25,8 +27,7 @@ function Upload(props) {
   };
 
   // Details of the uploaded file
-  console.log(selectedFile);
-
+  // console.log(selectedFile);
   const fileData = () => {
     if (selectedFile != null) {
       return (
@@ -72,7 +73,21 @@ function Upload(props) {
           Analyze
         </label>
       </div>
-      {fileData()}
+      <FileDrop
+        onDrop={(file, e) => {
+          console.log(file[0]);
+          setSelectedFile(file[0]);
+          setFile({
+            src: URL.createObjectURL(file[0]),
+            alt: file[0].name,
+          });
+          if (selectedFile != null) {
+            setSelectedFile(["myFile", selectedFile, selectedFile.name]);
+          }
+        }}
+      >
+        {fileData()}
+      </FileDrop>
     </div>
   );
 }
