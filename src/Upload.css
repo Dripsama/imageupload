@@ -10,6 +10,10 @@
   margin: auto;
   width: 600px;
   height: 300px;
+<<<<<<< HEAD
+=======
+  object-fit: contain;
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2
   background-color: #fff;
   border-color: #000;
   border-style: inset;
@@ -20,6 +24,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+<<<<<<< HEAD
+=======
+img {
+  width: 600px;
+  height: 300px;
+}
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2
 
 .btn-fnc {
   color: white !important;
@@ -40,6 +51,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+<<<<<<< HEAD
 
 @media screen and (max-width: 768px){
   .box-preview
@@ -64,3 +76,5 @@
   
 
 
+=======
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2

@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
+=======
+import { FileDrop } from "react-file-drop";
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2
 import "./Upload.css";
 
 function Upload(props) {
@@ -9,6 +13,10 @@ function Upload(props) {
   });
 
   const onFileChange = (e) => {
+<<<<<<< HEAD
+=======
+    console.log(e.target.files[0]);
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2
     setSelectedFile(e.target.files[0]);
     setFile({
       src: URL.createObjectURL(e.target.files[0]),
@@ -25,8 +33,12 @@ function Upload(props) {
   };
 
   // Details of the uploaded file
+<<<<<<< HEAD
   console.log(selectedFile);
 
+=======
+  // console.log(selectedFile);
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2
   const fileData = () => {
     if (selectedFile != null) {
       return (
@@ -72,7 +84,25 @@ function Upload(props) {
           Analyze
         </label>
       </div>
+<<<<<<< HEAD
       {fileData()}
+=======
+      <FileDrop
+        onDrop={(file, e) => {
+          console.log(file[0]);
+          setSelectedFile(file[0]);
+          setFile({
+            src: URL.createObjectURL(file[0]),
+            alt: file[0].name,
+          });
+          if (selectedFile != null) {
+            setSelectedFile(["myFile", selectedFile, selectedFile.name]);
+          }
+        }}
+      >
+        {fileData()}
+      </FileDrop>
+>>>>>>> f81c02744a2fa7db7ebb6c95ef2087109f2348d2
     </div>
   );
 }
