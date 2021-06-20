@@ -10,3 +10,13 @@ git clone "fork-url"
 ```
 git checkout -b new-branch-name
 ```
+## Make changes
+Add those changes to the branch you just created using the git add command:
+```
+git add file-chnaged
+```
+Now commit those changes using the git commit command:
+```
+git commit -m "message"
+```
+## Push changes
