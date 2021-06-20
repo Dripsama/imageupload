@@ -6,3 +6,7 @@ Now clone the forked repository to your machine.
 ```
 git clone "fork-url"
 ```
+## Create branch
+```
+git checkout -b new-branch-name
+```
