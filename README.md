@@ -20,3 +20,8 @@ Now commit those changes using the git commit command:
 git commit -m "message"
 ```
 ## Push changes
+```
+git push origin <your-branch-name>
+```
+## Submit changes for review
+If you go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button.
