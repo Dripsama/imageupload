@@ -27,6 +27,7 @@ function Upload(props) {
     const ctx = canvasRef.current.getContext("2d");
     ctx.drawImage(img, 0, 0, width, height);
     const obj = await net.detect(img);
+    //value of ctx and bounding box
     console.log("ctx => ", ctx);
     console.log("obj => ", obj);
     drawRect(obj, ctx);
