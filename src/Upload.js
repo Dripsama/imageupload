@@ -87,7 +87,7 @@ function Upload() {
       </div>
       <div className="uploading-final">
         <label className="btn-fnc" htmlFor="reupload-btn">
-          Upload Another File
+          Upload Another File 
         </label>
         <input
           type="button"
